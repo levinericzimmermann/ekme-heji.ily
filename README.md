@@ -1,4 +1,4 @@
-# ekme-heji.ily - Helmholtz-Ellis JI Notation for Lilypond
+# Helmholtz-Ellis JI Notation for Lilypond
 
 This package adds support for the [Extended Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf)
 in Lilypond > 2.19 via [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm) and the
@@ -6,10 +6,13 @@ in Lilypond > 2.19 via [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily
 
 ## Installation
 
-First follow the installation instructions for [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation)
-and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation). Then download
-the recent _ekme-heji.ily_ package and include the respective _ekme-heji.ily_ file in your
-Lilypond project:
+First follow the installation instructions for [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation) and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation). Then download the recent _ekme-heji.ily_ package. You can either extract the 'ekme-heji' files in the same directory as your Lilypond project, or you put them in Lilyponds installation folder (something like "lilypond/usr/share/lilypond/current/ly"). Finally you have to include the respective _ekme-heji.ily_ file in your Lilypond file:
+
+```lilypond
+\version "2.22.0"
+\language "english"
+\include "ekme-heji-ref-c.ily"
+```
 
 ## Usage and nomenclature
 
@@ -26,10 +29,10 @@ Commas are described by three letters, where
 2. the second letter indicates the prime number: `a` for 5, `b` for 7, `c` for 11, ...
 3. the last letter indicates the exponent: `a` for 1, `b` for 2, `c` for 3
 
-Therefore a 5/4 pitch to c would be denoted with eoaa (diatonic pitch name: e, comma: `oaa` for otonality of 5 with exponent 1).
+Therefore a 5/4 pitch to c would be written as `eoaa` (diatonic pitch name: `e`, comma: `oaa` for otonality (= `o`) of 5 (= `a`) with exponent 1 (= `a`)).
 When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers. For instance the diatonic pitch 'a' with two syntonic commas and one undecimal commas would be written as `aoaboca`.
 
-Tempered pitches are indicated by the letter `t`. For instance a tempered `d` would be `dt` and a tempered f-sharp would be `fst`.
+Tempered pitches are indicated with the letter `t`. For instance a tempered `d` would be `dt` and a tempered f-sharp would be `fst`.
 
 ## Examples
 
@@ -114,4 +117,5 @@ For now, _ekme-heji.ily_ is only available in English (English diatonic pitch na
 
 ## Modifications
 
-If you want to build your own tuning files with different nomenclature or different supported prime numbers, you can adjust the Python script which builds the tuning files.
+If you want to build your own tuning files with different nomenclature or different supported prime numbers, you can adjust the Python script which builds the tuning files. For running it, you first have to install [mutwo](https://github.com/mutwo-org/mutwo).
+See [mutwos api documentation](https://mutwo.readthedocs.io/en/latest/mutwo/converters/frontends/mutwo.converters.frontends.ekmelily.html#module-mutwo.converters.frontends.ekmelily) for more information regarding the tuning file script.
