@@ -61,7 +61,8 @@ Writing a [Wilson Hexany](http://anaphoria.com/wilsoncps.html) in HEJI - Notatio
 
 ![wilson](examples/wilson_hexany.png)
 
-Writing a twelfth tone row of tempered pitches:
+
+Writing a [twelfth tone row](https://en.wikipedia.org/wiki/Violin_Concerto_(Berg)) of tempered pitches:
 
 ```lilypond
 \version "2.22.0"
