@@ -22,20 +22,41 @@ The name of a _ekme-heji.ily_ pitch is composed of:
 
 Commas are described by three letters, where
 
-1. the first letter indicates the tonality: 'o' for otonality (exponents bigger than 0) and 'u' for utonality (exponents smaller than 0)
-2. the second letter indicates the prime number: 'a' for 5, 'b' for 7, 'c' for 11, ...
-3. the last letter indicates the exponent: 'a' for 1, 'b' for 2, 'c' for 3
+1. the first letter indicates the tonality: `o` for otonality (exponents bigger than 0) and `u` for utonality (exponents smaller than 0)
+2. the second letter indicates the prime number: `a` for 5, `b` for 7, `c` for 11, ...
+3. the last letter indicates the exponent: `a` for 1, `b` for 2, `c` for 3
 
-Therefore a 5/4 pitch to c would be denoted with eoaa (diatonic pitch name: e, comma: 'oaa' for otonality of 5 with exponent 1).
-When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers. For instance the diatonic pitch 'a' with two syntonic commas and one undecimal commas would be written as 'aoaboca'.
+Therefore a 5/4 pitch to c would be denoted with eoaa (diatonic pitch name: e, comma: `oaa` for otonality of 5 with exponent 1).
+When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers. For instance the diatonic pitch 'a' with two syntonic commas and one undecimal commas would be written as `aoaboca`.
 
-Tempered pitches are indicated by the letter 't'. For instance a tempered 'd' would be 'dt' and a tempered f-sharp would be 'fst'.
+Tempered pitches are indicated by the letter `t`. For instance a tempered `d` would be `dt` and a tempered f-sharp would be `fst`.
 
 ## Example
 
 Writing a [Wilson Hexany](http://anaphoria.com/wilsoncps.html) in HEJI - Notation:
 
 ```lilypond
+\version "2.22.0"   %! abjad.LilyPondFile._get_format_pieces()
+\language "english" %! abjad.LilyPondFile._get_format_pieces()
+
+\include "ekme-heji-ref-a.ily" %! abjad.LilyPondFile._get_formatted_includes()
+
+\new Score
+<<
+    \new Staff
+    {
+        \new Voice
+        {
+            \accidentalStyle "dodecaphonic"
+            aoca'1
+            boaaoba'
+            cobaoca''
+            doba''1
+            fsoaaoca''1
+            gsoaa''1
+        }
+    }
+>>
 ```
 
 ![wilson](examples/wilson_hexany.png)
