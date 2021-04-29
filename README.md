@@ -1,6 +1,6 @@
 # ekme-heji.ily - Helmholtz-Ellis JI Notation for Lilypond
 
-This package adds support for the [Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf)
+This package adds support for the [Extended Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf)
 in Lilypond > 2.19 via [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm) and the
 [Ekmelos font](http://www.ekmelic-music.org/en/extra/ekmelos.htm) from Thomas Richter.
 
@@ -50,7 +50,7 @@ By default not all specified accidentals and accidental combinations are support
 There are two reasons for this limitation:
 
 1. Lilypond takes too long to parse if all specified accidental combinations are added.
-2. The [Ekmelos font](http://www.ekmelic-music.org/en/extra/ekmelos.htm) only supports accidentals until prime number 23. This could be solved in future releases of Ekmelos or through using a different font.
+2. The [Ekmelos font](http://www.ekmelic-music.org/en/extra/ekmelos.htm) only supports accidentals until prime number 31. This could be solved in future releases of Ekmelos or through using a different font.
 
 For now, _ekme-heji.ily_ is only available in English (English diatonic pitch names, English default accidentals like 's' for sharp and 'f' for flat).
 
