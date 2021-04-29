@@ -31,7 +31,7 @@ When a pitch owns several commas they are always sorted from lower prime numbers
 
 Tempered pitches are indicated by the letter `t`. For instance a tempered `d` would be `dt` and a tempered f-sharp would be `fst`.
 
-## Example
+## Examples
 
 Writing a [Wilson Hexany](http://anaphoria.com/wilsoncps.html) in HEJI - Notation:
 
@@ -60,6 +60,42 @@ Writing a [Wilson Hexany](http://anaphoria.com/wilsoncps.html) in HEJI - Notatio
 ```
 
 ![wilson](examples/wilson_hexany.png)
+
+Writing a twelfth tone row of tempered pitches:
+
+```lilypond
+\version "2.22.0"
+\language "english"
+
+\include "ekme-heji-ref-a.ily"
+
+\new Score
+<<
+    \new Staff
+    {
+        \new Voice
+        {
+          \relative c'
+          {
+            gt1
+            bft
+            dt
+            fst
+            at
+            ct
+            et
+            gst
+            bt
+            cst
+            dst
+            ft
+        }
+      }
+    }
+>>
+```
+
+![berg](examples/berg_violin_concerto.png)
 
 ## Precision
 
