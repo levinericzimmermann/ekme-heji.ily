@@ -36,10 +36,10 @@ Tempered pitches are indicated by the letter `t`. For instance a tempered `d` wo
 Writing a [Wilson Hexany](http://anaphoria.com/wilsoncps.html) in HEJI - Notation:
 
 ```lilypond
-\version "2.22.0"   %! abjad.LilyPondFile._get_format_pieces()
-\language "english" %! abjad.LilyPondFile._get_format_pieces()
+\version "2.22.0"
+\language "english"
 
-\include "ekme-heji-ref-a.ily" %! abjad.LilyPondFile._get_formatted_includes()
+\include "ekme-heji-ref-a.ily"
 
 \new Score
 <<
