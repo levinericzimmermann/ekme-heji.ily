@@ -6,7 +6,7 @@ This package adds support for the [Extended Helmholtz-Ellis JI Pitch Notation](h
 
 First follow the installation instructions of [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation) and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation).
 Then download the recent _ekme-heji.ily_ package.
-You can either extract the 'ekme-heji' files in the same directory as your Lilypond project, or you put them in Lilyponds installation folder (something like `lilypond/usr/share/lilypond/current/ly`).
+You can either extract the ['ekme-heji.ily'](https://github.com/levinericzimmermann/ekme-heji.ily/blob/master/ekme-heji/ekme-heji.ily) file in the same directory as your Lilypond project, or you put them in Lilyponds installation directory (something like `lilypond/usr/share/lilypond/current/ly`).
 Finally you have to include the respective _ekme-heji.ily_ file in your Lilypond file:
 
 ```lilypond
