@@ -6,8 +6,8 @@ For a basic introduction to microtonal composition and notation read [this artic
 ## Installation
 
 First follow the installation instructions of [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation) and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation).
-Then download the recent _ekme-heji.ily_ package.
-You can either extract the ['ekme-heji.ily'](https://github.com/levinericzimmermann/ekme-heji.ily/blob/master/ekme-heji/ekme-heji.ily) file in the same directory as your Lilypond project, or you put them in Lilyponds installation directory (something like `lilypond/usr/share/lilypond/current/ly`).
+Then download the latest _ekme-heji.ily_ package.
+You can either extract the ['ekme-heji.ily'](https://github.com/levinericzimmermann/ekme-heji.ily/blob/master/ekme-heji/ekme-heji.ily) file in the same directory as your Lilypond project, or you put it in Lilyponds installation directory (something like `lilypond/usr/share/lilypond/current/ly`).
 Finally you have to include _ekme-heji.ily_ file in your Lilypond file:
 
 ```lilypond
@@ -23,15 +23,17 @@ The pitch names are composed of three subparts:
 
 | explanation | example 1 | example 2 |
 | --------------- | --------------- | --------------- |
-| diatonic pitch name | a | c |
-| Pythagorean accidental | s | ff |
-| additional commas | oaa | ubaocb |
+| diatonic pitch name | `a` | `c` |
+| Pythagorean accidental | `s` (for 'sharp') | `ff` (for 'double flat')|
+| additional commas | `oaa` | `ubaocb` |
+
+Therefore `asoaa` and `cffubaocb` would be the concatenated full pitch names.
 
 Additional commas are described by three letters:
 
 | explanation | example 1 | example 2 |
 | --------------- | --------------- | --------------- |
-| tonality | `o` | `u` |
+| tonality | `o` (for otonality) | `u` (for utonality) |
 | prime number | `a` (for 5) | `c` (for 11) |
 | exponent | `a` for +/- 1 | `b` for +/- 2 |
 
@@ -39,15 +41,17 @@ Tonality can either be [o for otonality or u for utonality](https://en.wikipedia
 
 The prime number nomenclature is a simple mapping of the alphabetical order to rising prime numbers:
 
-- 3 -> `a`
-- 5 -> `b`
-- 7 -> `c`
+- 5 -> `a`
+- 7 -> `b`
+- 11 -> `c`
+etc.
 
 The exponent nomenclature is also a simple mapping of alphabetical order to rising integers:
 
 - 1 -> `a`
 - 2 -> `b`
 - 3 -> `c`
+etc.
 
 Therefore a 5/4 pitch to c would be written as `eoaa` (diatonic pitch name: `e`, comma: `oaa` for otonality (= `o`) of 5 (= `a`) with exponent 1 (= `a`)).
 When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers.
