@@ -27,7 +27,7 @@ The pitch names are composed of three subparts:
 | Pythagorean accidental | `s` (for 'sharp') | `ff` (for 'double flat')|
 | additional commas | `oaa` | `ubaocb` |
 
-Therefore `asoaa` and `cffubaocb` would examples for concatenated full pitch names.
+Therefore `asoaa` and `cffubaocb` are examples for concatenated full pitch names.
 
 Additional commas are described by three letters:
 
