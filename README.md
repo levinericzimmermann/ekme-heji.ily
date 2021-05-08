@@ -1,12 +1,13 @@
 # Helmholtz-Ellis JI Notation for Lilypond
 
-This package adds support for the [Extended Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf)
-in Lilypond > 2.19 via [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm) and the
-[Ekmelos font](http://www.ekmelic-music.org/en/extra/ekmelos.htm) from Thomas Richter.
+This package adds support for the [Extended Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf) in Lilypond via [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm) and the [Ekmelos font](http://www.ekmelic-music.org/en/extra/ekmelos.htm) from Thomas Richter.
 
 ## Installation
 
-First follow the installation instructions for [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation) and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation). Then download the recent _ekme-heji.ily_ package. You can either extract the 'ekme-heji' files in the same directory as your Lilypond project, or you put them in Lilyponds installation folder (something like "lilypond/usr/share/lilypond/current/ly"). Finally you have to include the respective _ekme-heji.ily_ file in your Lilypond file:
+First follow the installation instructions of [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation) and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation).
+Then download the recent _ekme-heji.ily_ package.
+You can either extract the 'ekme-heji' files in the same directory as your Lilypond project, or you put them in Lilyponds installation folder (something like `lilypond/usr/share/lilypond/current/ly`).
+Finally you have to include the respective _ekme-heji.ily_ file in your Lilypond file:
 
 ```lilypond
 \version "2.22.0"
@@ -16,23 +17,42 @@ First follow the installation instructions for [Ekmelily](http://www.ekmelic-mus
 
 ## Usage and nomenclature
 
-_ekme-heji.ily_ adds new pitches to Lilypond. The pitches follow a logical nomenclature to differentiate between intonations.
-The name of a _ekme-heji.ily_ pitch is composed of:
+_ekme-heji.ily_ adds new pitches to Lilypond.
+The pitch names composed by three subparts:
 
-1. diatonic pitch name
-2. (optional) Pythagorean accidental ('s' for sharp, 'ss' for double sharp, 'f' for flat, 'ff' for double flat)
-3. (optional) additional commas
+| explanation | example 1 | example 2 |
+| --------------- | --------------- | --------------- |
+| diatonic pitch name | a | c |
+| Pythagorean accidental | s | ff |
+| additional commas | oaa | ubaocb |
 
-Commas are described by three letters, where
+Additional commas, again, are also described by three letters:
 
-1. the first letter indicates the tonality: `o` for otonality (exponents bigger than 0) and `u` for utonality (exponents smaller than 0)
-2. the second letter indicates the prime number: `a` for 5, `b` for 7, `c` for 11, ...
-3. the last letter indicates the exponent: `a` for 1, `b` for 2, `c` for 3
+| explanation | example 1 | example 2 |
+| --------------- | --------------- | --------------- |
+| tonality | `o` | `u` |
+| prime number | `a` (for 5) | `c` (for 11) |
+| exponent | `a` for +/- 1 | `b` for +/- 2 |
+
+Tonality can either be [o for otonality or u for utonality](https://en.wikipedia.org/wiki/Otonality_and_Utonality) (if the exponent is bigger than 0, then it's an otonality, if the exponent is smaller than 0, then it's an utonality).
+The prime number nomenclature is a simple mapping of the alphabetical order to rising prime numbers:
+
+- 3 -> `a`
+- 5 -> `b`
+- 7 -> `c`
+
+The exponent nomenclature is also a simple mapping of alphabetical order to rising integers:
+
+- 1 -> `a`
+- 2 -> `b`
+- 3 -> `c`
 
 Therefore a 5/4 pitch to c would be written as `eoaa` (diatonic pitch name: `e`, comma: `oaa` for otonality (= `o`) of 5 (= `a`) with exponent 1 (= `a`)).
-When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers. For instance the diatonic pitch 'a' with two syntonic commas and one undecimal commas would be written as `aoaboca`.
+When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers.
+For instance the diatonic pitch 'a' with two syntonic commas and one undecimal commas would be written as `aoaboca`.
 
-Tempered pitches are indicated with the letter `t`. For instance a tempered `d` would be `dt` and a tempered f-sharp would be `fst`.
+Tempered pitches are indicated with the letter `t`.
+For instance a tempered `d` would be `dt` and a tempered f-sharp would be `fst`.
 
 ## Examples
 
@@ -103,11 +123,12 @@ Writing a [twelfth tone row](https://en.wikipedia.org/wiki/Violin_Concerto_(Berg
 
 ## Precision
 
-The midi rendering is precise up to +/- 0.2 cents.
+Midi playback is precise to within +/- 0.2 cents.
 
 ## Limitations
 
-By default not all specified accidentals and accidental combinations are supported. The highest implemented prime number is 17 although the [Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf) defines accidentals until 47.
+By default not all specified accidentals and accidental combinations are supported.
+The highest implemented prime number is 17 although the [Helmholtz-Ellis JI Pitch Notation](https://marsbat.space/pdfs/notation.pdf) defines accidentals until 47.
 There are two reasons for this limitation:
 
 1. Lilypond takes too long to parse if all specified accidental combinations are added.
@@ -117,5 +138,6 @@ For now, _ekme-heji.ily_ is only available in English (English diatonic pitch na
 
 ## Modifications
 
-If you want to build your own tuning files with different nomenclature or different supported prime numbers, you can adjust the Python script which builds the tuning files. For running it, you first have to install [mutwo](https://github.com/mutwo-org/mutwo).
+If you want to build your own tuning files with different nomenclature or different supported prime numbers, you can adjust the Python script which builds the tuning files.
+For running it, you first have to install [mutwo](https://github.com/mutwo-org/mutwo).
 See [mutwos api documentation](https://mutwo.readthedocs.io/en/latest/mutwo/converters/frontends/mutwo.converters.frontends.ekmelily.html#module-mutwo.converters.frontends.ekmelily) for more information regarding the tuning file script.
