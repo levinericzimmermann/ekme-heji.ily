@@ -8,7 +8,7 @@ For a basic introduction to microtonal composition and notation read [this artic
 First follow the installation instructions of [Ekmelily](http://www.ekmelic-music.org/en/extra/ekmelily.htm#Installation) and [Ekmelos](http://www.ekmelic-music.org/en/extra/ekmelos.htm#Installation).
 Then download the latest [_ekme-heji.ily_ package](https://github.com/levinericzimmermann/ekme-heji.ily/releases) or clone the files straight from github.
 You can either extract the ['ekme-heji.ily'](https://github.com/levinericzimmermann/ekme-heji.ily/blob/master/ekme-heji/ekme-heji.ily) file in the same directory as your Lilypond project, or you put it in Lilyponds installation directory (something like `lilypond/usr/share/lilypond/current/ly`).
-Finally you have to include _ekme-heji.ily_ file in your Lilypond file:
+Finally you have to include _ekme-heji.ily_ in your Lilypond file:
 
 ```lilypond
 \version "2.22.0"
