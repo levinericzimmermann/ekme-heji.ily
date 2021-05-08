@@ -27,7 +27,7 @@ The pitch names are composed of three subparts:
 | Pythagorean accidental | `s` (for 'sharp') | `ff` (for 'double flat')|
 | additional commas | `oaa` | `ubaocb` |
 
-Therefore `asoaa` and `cffubaocb` would be the concatenated full pitch names.
+Therefore `asoaa` and `cffubaocb` would examples for concatenated full pitch names.
 
 Additional commas are described by three letters:
 
@@ -44,16 +44,14 @@ The prime number nomenclature is a simple mapping of the alphabetical order to r
 - 5 -> `a`
 - 7 -> `b`
 - 11 -> `c`
-etc.
 
 The exponent nomenclature is also a simple mapping of alphabetical order to rising integers:
 
 - 1 -> `a`
 - 2 -> `b`
 - 3 -> `c`
-etc.
 
-Therefore a 5/4 pitch to c would be written as `eoaa` (diatonic pitch name: `e`, comma: `oaa` for otonality (= `o`) of 5 (= `a`) with exponent 1 (= `a`)).
+Therefore a pitch with the interval `5/4` to `c` would be written as `eoaa` (diatonic pitch name: `e`, comma: `oaa` for otonality (= `o`) of 5 (= `a`) with exponent 1 (= `a`)).
 When a pitch owns several commas they are always sorted from lower prime numbers to higher prime numbers.
 For instance the diatonic pitch 'a' with two syntonic commas and one undecimal commas would be written as `aoaboca`.
 
