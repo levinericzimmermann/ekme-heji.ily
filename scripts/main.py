@@ -6,6 +6,7 @@ if __name__ == "__main__":
 
     for reference in pitches_constants.ASCENDING_DIATONIC_PITCH_NAMES:
         converter = ekmelily.HEJIEkmelilyTuningFileConverter(
-            reference_pitch=reference, path="ekme-heji"
+            path="ekme-heji/ekme-heji-ref-{}.ily".format(reference),
+            reference_pitch=reference,
         )
         converter.convert()
