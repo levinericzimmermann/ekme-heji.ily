@@ -12,13 +12,13 @@ Finally you have to include the respective _ekme-heji.ily_ file in your Lilypond
 ```lilypond
 \version "2.22.0"
 \language "english"
-\include "ekme-heji-ref-c.ily"
+\include "ekme-heji.ily"
 ```
 
 ## Usage and nomenclature
 
 _ekme-heji.ily_ adds new pitches to Lilypond.
-The pitch names composed by three subparts:
+The pitch names are composed of three subparts:
 
 | explanation | example 1 | example 2 |
 | --------------- | --------------- | --------------- |
@@ -26,7 +26,7 @@ The pitch names composed by three subparts:
 | Pythagorean accidental | s | ff |
 | additional commas | oaa | ubaocb |
 
-Additional commas, again, are also described by three letters:
+Additional commas are described by three letters:
 
 | explanation | example 1 | example 2 |
 | --------------- | --------------- | --------------- |
@@ -34,7 +34,8 @@ Additional commas, again, are also described by three letters:
 | prime number | `a` (for 5) | `c` (for 11) |
 | exponent | `a` for +/- 1 | `b` for +/- 2 |
 
-Tonality can either be [o for otonality or u for utonality](https://en.wikipedia.org/wiki/Otonality_and_Utonality) (if the exponent is bigger than 0, then it's an otonality, if the exponent is smaller than 0, then it's an utonality).
+Tonality can either be [o for otonality or u for utonality](https://en.wikipedia.org/wiki/Otonality_and_Utonality) (if the exponent is bigger than 0 it's an otonality, if the exponent is smaller than 0 it's an utonality).
+
 The prime number nomenclature is a simple mapping of the alphabetical order to rising prime numbers:
 
 - 3 -> `a`
@@ -62,7 +63,7 @@ Writing a [Wilson Hexany](http://anaphoria.com/wilsoncps.html) in HEJI - Notatio
 \version "2.22.0"
 \language "english"
 
-\include "ekme-heji-ref-a.ily"
+\include "ekme-heji.ily"
 
 \new Score
 <<
@@ -91,7 +92,7 @@ Writing a [twelfth tone row](https://en.wikipedia.org/wiki/Violin_Concerto_(Berg
 \version "2.22.0"
 \language "english"
 
-\include "ekme-heji-ref-a.ily"
+\include "ekme-heji.ily"
 
 \new Score
 <<
