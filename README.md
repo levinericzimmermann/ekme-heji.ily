@@ -143,5 +143,5 @@ For now, _ekme-heji.ily_ is only available in English (English diatonic pitch na
 ## Modifications
 
 If you want to build your own tuning files with different nomenclature or different supported prime numbers, you can adjust the Python script which builds the tuning files.
-For running it, you first have to install [mutwo](https://github.com/mutwo-org/mutwo).
-See [mutwos api documentation](https://mutwo.readthedocs.io/en/latest/mutwo/converters/frontends/mutwo.converters.frontends.ekmelily.html#module-mutwo.converters.frontends.ekmelily) for more information regarding the tuning file script.
+For running it, you first have to install [mutwo.ekmelily](https://github.com/mutwo-org/mutwo.ekmelily).
+See [mutwos api documentation](https://mutwo-org.github.io/api/api_documentation.html) for more information regarding the tuning file script.
